@@ -1,8 +1,8 @@
 namespace Assignment1.Models
 {
-  public enum Role
-  {
-    STUDENT,
-    PROFESSOR
-  }
+    public enum Role
+    {
+        Student,
+        Professor
+    }
 }
