@@ -1,10 +1,10 @@
 namespace Assignment1.Models
 {
-  public enum EquipmentType
-  {
-    LAPTOP,
-    PHONE,
-    TABLET,
-    OTHER
-  }
+    public enum EquipmentType
+    {
+        Laptop,
+        Phone,
+        Tablet,
+        Other
+    }
 }
