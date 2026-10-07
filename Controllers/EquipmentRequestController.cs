@@ -19,10 +19,13 @@ namespace Assignment1.Controllers
             if (ModelState.IsValid)
             {
                 _equipmentRequestRepository.AddRequest(equipmentRequest);
-                // TODO: Create the conformation page
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Confirmation");
             }
             return View(equipmentRequest);
+        }
+        public IActionResult Confirmation()
+        {
+            return View();
         }
     }
 }
