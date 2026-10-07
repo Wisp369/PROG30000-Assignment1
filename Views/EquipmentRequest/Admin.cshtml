@@ -1,0 +1,39 @@
+@model IEnumerable<EquipmentRequest>
+
+<div>
+  <h1>All Equipment</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Request ID</th>
+        <th scope="col">Username</th>
+        <th scope="col">User email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Request Description</th>
+        <th scope="col">Equipment Type</th>
+        <th scope="col">Loan Duration (days)</th>
+        <th scope="col">Accept</th>
+        <th scope="col">Deny</th>
+      </tr>
+    </thead>
+    <tbody>
+      @{
+        foreach (var request in Model)
+        {
+          <tr>
+            <th scope="row">@request.Id</th>
+            <td>@request.User.Name</td>
+            <td>@request.User.Email</td>
+            <td>@request.User.Role</td>
+            <td>@request.RequestDetails</td>
+            <td>@request.EquipmentType</td>
+            <td>@request.Duration</td>
+            <td><button class="btn btn-success">Allow</button></td>
+            <td><button class="btn btn-danger">Deny</button></td>
+          </tr>
+        }
+      }
+    </tbody>
+  </table>
+</div>
+

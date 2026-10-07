@@ -26,5 +26,11 @@ namespace Assignment1.Controllers
         {
             return View();
         }
+
+        public IActionResult Admin()
+        {
+            var allRequests = EquipmentService.EquipmentRequest.GetAllRequests();
+            return View(allRequests);
+        }
     }
 }

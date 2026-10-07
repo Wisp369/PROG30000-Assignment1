@@ -19,5 +19,10 @@ namespace Assignment1.Repositories
         _requests.Add(newRequest);
       }
     }
+
+    public List<EquipmentRequest> GetAllRequests()
+    {
+      return _requests;
+    }
   }
 }
