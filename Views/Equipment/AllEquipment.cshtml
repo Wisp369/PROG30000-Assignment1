@@ -1,0 +1,29 @@
+@model IEnumerable<Equipment>
+
+<div>
+  <h1>All Equipment</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Equipment ID</th>
+        <th scope="col">Equipment Type</th>
+        <th scope="col">Equipment Description</th>
+        <th scope="col">Available?</th>
+      </tr>
+    </thead>
+    <tbody>
+      @{
+        foreach (var equipment in Model)
+        {
+          <tr>
+            <th scope="row">@equipment.Id</th>
+            <td>@equipment.EquipmentType</td>
+            <td>@equipment.Description</td>
+            <td>@equipment.IsAvailable</td>
+          </tr>
+        }
+      }
+    </tbody>
+  </table>
+</div>
+

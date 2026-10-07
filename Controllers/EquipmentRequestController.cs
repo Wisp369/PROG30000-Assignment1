@@ -1,13 +1,12 @@
 using Assignment1.Models;
 using Assignment1.Repositories;
+using Assignment1.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Assignment1.Controllers
 {
     public class EquipmentRequestController : Controller
     {
-        private static EquipmentRequestRepository _equipmentRequestRepository = new EquipmentRequestRepository();
-
         public IActionResult RequestForm() // EquipmentRequest/RequestForm
         {
             return View();
@@ -18,7 +17,7 @@ namespace Assignment1.Controllers
         {
             if (ModelState.IsValid)
             {
-                _equipmentRequestRepository.AddRequest(equipmentRequest);
+                EquipmentService.EquipmentRequest.AddRequest(equipmentRequest);
                 return RedirectToAction("Confirmation");
             }
             return View(equipmentRequest);
