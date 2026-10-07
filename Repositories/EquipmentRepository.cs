@@ -22,5 +22,9 @@ namespace Assignment1.Repositories
         {
             return _equipment;
         }
+        public List<Equipment> GetAvailableEquipment()
+        {
+            return _equipment.Where(e => e.IsAvailable).ToList();
+        }
     }
 }
