@@ -4,3 +4,5 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 /Assignment1_MVC.pdf
+*/.DS_Store
+/Screenshots
